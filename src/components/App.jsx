@@ -1,17 +1,16 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import { FeedbackOptions } from "./FeedBackOptions/FeedBackOptions";
-import { Statistics } from "./Statistics/Statistics";
-import { Section } from "./Section/Section";
-import { Notification } from "./Notification/Notification";
-
+import { FeedbackOptions } from './FeedBackOptions/FeedBackOptions';
+import { Statistics } from './Statistics/Statistics';
+import { Section } from './Section/Section';
+import { Notification } from './Notification/Notification';
 
 class App extends Component {
-    state = {
-      good: 0,
-      neutral: 0,
-      bad: 0
-  }
+  state = {
+    good: 0,
+    neutral: 0,
+    bad: 0,
+  };
 
   leaveFeedback = option => {
     this.setState(prevState => {
@@ -29,7 +28,7 @@ class App extends Component {
   countPositiveFeedbackPercentage = () => {
     return Math.round((this.state.good / this.countTotalFeedback()) * 100);
   };
-  
+
   render() {
     return (
       <>
@@ -54,9 +53,8 @@ class App extends Component {
           )}
         </Section>
       </>
-    )
+    );
   }
 }
 
-export default App
-
+export default App;
